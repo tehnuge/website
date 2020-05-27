@@ -2,53 +2,57 @@ import React from 'react';
 import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import * as Text from './text';
+
 AOS.init();
+const imgBg = "https://www.dqindia.com/wp-content/uploads/2017/03/server_room.jpg"
 function App() {
   return (
-    <div className="container-fluid px-0">
+    <div className="d-flex justify-content-center">
       <div className="App">
         <header className="App-header">
           <div className="flex-row">
             <div className="App-logo col-md-6">
-              <img src="http://www.nineweb.co.th/images/nineweb_logo_blue.png" className="App-logo" alt="logo" />
-              <h1>Nine Web</h1>
+              <img src="nineweb_mod.png" className="App-logo" alt="logo" />
+              <h1>{Text.NINE_WEB}</h1>
             </div>
           </div>
           <div className="flex-row">
             <ul className="tabs">
-              <li className="dropdown">Cloud Web Hosting
-              <p className="dropdown-content">
-                  บริการเว็บโฮสติ้งบนระบบคลาวด์
-                  จุดเด่นของคลาวด์คือระบบจะย้ายเว็บไปยัง server ที่ทำให้เว็บเร็วที่สุดโดยอัตโนมัติ หรือหาก server
-                  มีปัญหา ระบบก็จะย้ายเว็บไปเครื่องอื่นโดยอัตโนมัติ โดยไม่มี down-time หรือหาก load บน server
-                  เริ่มมีมากขึ้นก็จะย้ายไป server ที่ load น้อยกว่าโดยอัตโนมัติเช่นกัน
-              </p>
+              <li className="dropdown">{Text.CLOUD_WEB_HOSTING}
+                <p className="dropdown-content">
+                  {Text.CLOUD_WEB_HOSTING_D}
+                </p>
               </li>
-              <li className="dropdown">Cloud Server (VPS)
-              <p className="dropdown-content">TEST
+              <li className="dropdown">{Text.CLOUD_SERVER}
+              <p className="dropdown-content">{Text.CLOUD_SERVER_D}
               </p></li>
-              <li>Cloud Mail Hosting</li>
-              <li>Domain</li>
-              <li>Colocation</li>
-              <li>SSL</li>
-              <li>Dedicated</li>
+              <li className="dropdown">{Text.CLOUD_MAIL}
+              <p className="dropdown-content">{Text.CLOUD_MAIL_D}
+              </p></li>
+              <li className="dropdown">{Text.DOMAIN}
+              <p className="dropdown-content">{Text.DOMAIN_D}
+              </p></li>
+              <li className="dropdown">{Text.COLO}
+              <p className="dropdown-content">{Text.COLO_D}
+              </p></li>
+              <li className="dropdown">{Text.SSL}
+              <p className="dropdown-content">{Text.SSL_D}
+              </p></li>
+              <li className="dropdown">{Text.DED}
+              <p className="dropdown-content">{Text.DED_D}
+              </p></li>
             </ul>
           </div>
-          <img src="https://www.dqindia.com/wp-content/uploads/2017/03/server_room.jpg" className="main-image" />
+          <img data-aos="fade-left" src={imgBg} className="main-image" />
         </header>
         <div data-aos="fade-in">
-          <h2>Cloud Web Hosting</h2>
-          <div className="row">
+          <h2>{Text.CLOUD_WEB_HOSTING}</h2>
+          <div className="flex-row">
             <ul>
-              <li>เว็บไซต์บน Cloud โหลดเร็วกว่า Hosting แบบเดิม ๆ</li>
-              <li>0% Down-time จากการซ่อมหรืออัพเกรด Hardware</li>
-              <li>เว็บไม่อืดด้วยระบบกระจายโหลดไป server อื่นโดยอัตโนมัติ</li>
-              <li>Reboot อัตโนมัติ เมื่อพบว่า OS ไม่ตอบสนอง</li>
-              <li>ใช้ Multipath SAN Storage และ SAS HDD</li>
-              <li>Redundant Cisco Switch และ Network Path</li>
-              <li>.NET 4, PHP 7, ASP 3, MSSQL 2017, MySQL 5</li>
-              <li>คืนเงินโดยไม่มีเงื่อนไข เมื่อยกเลิกภายใน 30 วัน</li>
+              {Text.CWH_LI.map(val => {
+                return <li>{val}</li>
+              })}
             </ul>
           </div>
         </div>
