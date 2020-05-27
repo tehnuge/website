@@ -25,40 +25,78 @@ function App() {
                 </p>
               </li>
               <li className="dropdown">{Text.CLOUD_SERVER}
-              <p className="dropdown-content">{Text.CLOUD_SERVER_D}
-              </p></li>
+                <p className="dropdown-content">{Text.CLOUD_SERVER_D}
+                </p></li>
               <li className="dropdown">{Text.CLOUD_MAIL}
-              <p className="dropdown-content">{Text.CLOUD_MAIL_D}
-              </p></li>
+                <p className="dropdown-content">{Text.CLOUD_MAIL_D}
+                </p></li>
               <li className="dropdown">{Text.DOMAIN}
-              <p className="dropdown-content">{Text.DOMAIN_D}
-              </p></li>
+                <p className="dropdown-content">{Text.DOMAIN_D}
+                </p></li>
               <li className="dropdown">{Text.COLO}
-              <p className="dropdown-content">{Text.COLO_D}
-              </p></li>
+                <p className="dropdown-content">{Text.COLO_D}
+                </p></li>
               <li className="dropdown">{Text.SSL}
-              <p className="dropdown-content">{Text.SSL_D}
-              </p></li>
+                <p className="dropdown-content">{Text.SSL_D}
+                </p></li>
               <li className="dropdown">{Text.DED}
-              <p className="dropdown-content">{Text.DED_D}
-              </p></li>
+                <p className="dropdown-content">{Text.DED_D}
+                </p></li>
             </ul>
           </div>
-          <img data-aos="fade-left" src={imgBg} className="main-image" />
+          <div className="d-flex justify-content-center">
+            <img data-aos="fade-left" src={imgBg} className="img-fluid main-image" />
+          </div>
         </header>
-        <div data-aos="fade-in">
-          <h2>{Text.CLOUD_WEB_HOSTING}</h2>
-          <div className="flex-row">
-            <ul>
-              {Text.CWH_LI.map(val => {
-                return <li>{val}</li>
-              })}
-            </ul>
+        <div className="row">
+          <div className="col-sm-4">
+            <div className="card">
+              <div className="card-body">
+                <h2 className="card-title">{Text.CLOUD_WEB_HOSTING}</h2>
+                <div className="card-text">
+                  <ul>
+                    {Text.CWH_LI.map(val => {
+                      return <li>{val}</li>
+                    })}
+                  </ul>
+                </div>
+                <a href="#" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="card">
+              <div className="card-body">
+                <h2 className="card-title">{Text.CLOUD_SERVER}</h2>
+                <div className="card-text">
+                  <ul>
+                    {Text.CWH_LI.map(val => {
+                      return <li>{val}</li>
+                    })}
+                  </ul>
+                </div>
+                <a href="#" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="card">
+              <div className="card-body">
+                <h2 className="card-title">{Text.CLOUD_MAIL}</h2>
+                <div className="card-text">
+                  <ul>
+                    {Text.CM_LI.map(val => {
+                      return <li>{val}</li>
+                    })}
+                  </ul>
+                </div>
+                <a href="#" class="btn btn-primary">Learn more</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
   );
 }
 

@@ -34,4 +34,27 @@ export const CWH_LI = [
 "Use Multipath SAN Storage and SAS HDD",
 "Redundant Cisco Switch และ Network Path",
 ".NET 4, PHP 5, ASP 3, MSSQL 2012, MySQL 5",
-"30-day unconditional money-back guarantee"]
+"30-day unconditional money-back guarantee"
+]
+
+export const CS_LI = [
+  "Support over 80 OSes Windows and Linux",
+  "Choose your spec and pay for what you use",
+  "Redundant Network on all paths",
+  "60 Gbps domestic bandwidth / 1Mbps international in/out bandwidth",
+  "Upgrade in minutes for CPU, RAM, Disk",
+  "Utilize full power of Cloud technology",
+  "Move to low-load server automatically",
+  "Free 7-day trial"
+]
+
+export const CM_LI = [
+  "Up to 97% spam detection and Anti-virus",
+"Attacks, mail harvesting and DoS prevention",
+"Multiple Mail Gateways for extreme load",
+"Collaboration : Contact, Calendar, Task, Note",
+"Full-featured Webmail : Thai and multilingual",
+"SMTP, POP, IMAP & Alternate SMTP port",
+"Supports mobile devices: iPhone, BB, Android",
+"Sharing files & attachments via Cloud storage"
+]
