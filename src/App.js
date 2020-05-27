@@ -3,10 +3,21 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import * as Text from './text';
+import HeaderComp from './HeaderComp'
 
 AOS.init();
 const imgBg = "https://news.sophos.com/wp-content/uploads/2019/07/shutterstock_571378933-compressor.jpg"
 function App() {
+  let titles = [
+    {name: Text.CLOUD_WEB_HOSTING, body: Text.CLOUD_WEB_HOSTING_D},
+    {name: Text.CLOUD_SERVER, body: Text.CLOUD_SERVER_D},
+    {name: Text.CLOUD_MAIL, body: Text.CLOUD_MAIL_D},
+    {name: Text.DOMAIN, body: Text.DOMAIN_D},
+    {name: Text.COLO, body: Text.COLO_D},
+    {name: Text.SSL, body: Text.SSL_D},
+    {name: Text.DED, body: Text.DED_D},
+  ]
+
   return (
     <div className="d-flex justify-content-center">
       <div className="App">
@@ -19,29 +30,9 @@ function App() {
           </div>
           <div className="flex-row">
             <ul className="tabs">
-              <li className="dropdown">{Text.CLOUD_WEB_HOSTING}
-                <p className="dropdown-content">
-                  {Text.CLOUD_WEB_HOSTING_D}
-                </p>
-              </li>
-              <li className="dropdown">{Text.CLOUD_SERVER}
-                <p className="dropdown-content">{Text.CLOUD_SERVER_D}
-                </p></li>
-              <li className="dropdown">{Text.CLOUD_MAIL}
-                <p className="dropdown-content">{Text.CLOUD_MAIL_D}
-                </p></li>
-              <li className="dropdown">{Text.DOMAIN}
-                <p className="dropdown-content">{Text.DOMAIN_D}
-                </p></li>
-              <li className="dropdown">{Text.COLO}
-                <p className="dropdown-content">{Text.COLO_D}
-                </p></li>
-              <li className="dropdown">{Text.SSL}
-                <p className="dropdown-content">{Text.SSL_D}
-                </p></li>
-              <li className="dropdown">{Text.DED}
-                <p className="dropdown-content">{Text.DED_D}
-                </p></li>
+              {titles.map((title) => {                
+                return <HeaderComp name={title.name} body={title.body} />
+              })}
             </ul>
           </div>
           <div className="d-flex justify-content-center">
