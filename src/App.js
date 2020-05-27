@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import * as Text from './text';
 
 AOS.init();
-const imgBg = "https://www.dqindia.com/wp-content/uploads/2017/03/server_room.jpg"
+const imgBg = "https://news.sophos.com/wp-content/uploads/2019/07/shutterstock_571378933-compressor.jpg"
 function App() {
   return (
     <div className="d-flex justify-content-center">
