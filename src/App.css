@@ -4,7 +4,6 @@
 }
 .d-flex{
   background-color: #336699;
-  /* background-color: #4c7bdf; */
 }
 
 .dropdown-content {
@@ -41,9 +40,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   padding-bottom: 10px;
-  /* margin-bottom: 20px; */
-  /* background-color: #336699; */
-  background-color: #4c7bdf;
+  background-color: #212f4c;
+  /* background-color: #4c7bdf; */
 
 }
 .tabs{
@@ -67,7 +65,7 @@ li {
 }
 
 #footer {
-  background-color: #0f0f42;
+  background-color: #212f4c;
   width: 100vw;
 }
 
