@@ -6,6 +6,7 @@ export const CLOUD_WEB_HOSTING_D = `Major benefit of cloud is it will move your
   it was setup on forever until there is something happens to that server. 
   On cloud, you will never notice when your site is moved. 
   It is moved as soon as the cloud detects load imbalance.`
+export const CLOUD_WEB_HOSTING_T = "Web hosting on Cloud"
 export const CLOUD_SERVER = "Cloud Server (VPS)"
 export const CLOUD_SERVER_D = `You can specify your server specification 
 such as CPU (GHz), Memory (GB) and Disk space (GB). They can be adjusted 
@@ -15,6 +16,7 @@ It may require minutes of down-time and usually need days or weeks to order the 
 This is totally different in Cloud technology. The setup may take upto only a few hours 
 and an upgrade can be done with no down-time or under a minute; virtually no 
 down-time in most cases.`
+export const CLOUD_SERVER_T=""
 export const CLOUD_MAIL = "Cloud Mail Hosting"
 export const CLOUD_MAIL_D = `Mail Service on Cloud tremendously increases traffic handling capability compared to regular mail server. Thanks to Distributed Resource Scheduler (DRS) on Cloud which prevents any single erver to get overloaded. Moreover, at Nine Web, we deploy multiple outgoing mail gateways to dispatch mails quicker and to help reducing blacklisting when attacked by spams.`
 export const DOMAIN = "Domain"

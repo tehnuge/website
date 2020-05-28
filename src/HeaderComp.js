@@ -7,6 +7,7 @@ const HeaderComp = props => {
       <div className="dropdown-content">
         <div className="card">
           <div className="card-body">
+            <h3 className="card-title">{props.bodyTitle}</h3>
             {props.body}
           </div>
         </div>

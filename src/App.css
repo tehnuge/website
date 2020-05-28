@@ -3,7 +3,8 @@
   margin: auto 5%;
 }
 .d-flex{
-  background-color: #4c7bdf;
+  background-color: #336699;
+  /* background-color: #4c7bdf; */
 }
 
 .dropdown-content {
@@ -32,20 +33,24 @@
 }
 
 .main-image{
-  justify-content: center;
-  max-height: 100vh;
+  max-height: 80vh;
 }
 .App-header {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  /* margin-bottom: 20px; */
+  /* background-color: #336699; */
+  background-color: #4c7bdf;
+
 }
 .tabs{
   display: flex;
   flex-direction: row;
   font-size:15px;
+  max-width: 80vw;
 }
 h1 {
   display: inline;
@@ -60,6 +65,12 @@ li {
 .card {
   color: black;
 }
+
+#footer {
+  background-color: #0f0f42;
+  width: 100vw;
+}
+
 /* .App-link {
   color: #61dafb;
 }
