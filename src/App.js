@@ -13,11 +13,11 @@ const App = () => {
   const titles = [
     { name: Text.CLOUD_WEB_HOSTING, body: Text.CLOUD_WEB_HOSTING_D, bodyTitle: Text.CLOUD_WEB_HOSTING_T },
     { name: Text.CLOUD_SERVER, body: Text.CLOUD_SERVER_D, bodyTitle: Text.CLOUD_SERVER_T },
-    { name: Text.CLOUD_MAIL, body: Text.CLOUD_MAIL_D },
-    { name: Text.DOMAIN, body: Text.DOMAIN_D },
-    { name: Text.COLO, body: Text.COLO_D },
-    { name: Text.SSL, body: Text.SSL_D },
-    { name: Text.DED, body: Text.DED_D },
+    { name: Text.CLOUD_MAIL, body: Text.CLOUD_MAIL_D, bodyTitle: Text.CLOUD_MAIL_T },
+    { name: Text.DOMAIN, body: Text.DOMAIN_D, bodyTitle: Text.DOMAIN_T },
+    { name: Text.COLO, body: Text.COLO_D, bodyTitle: Text.COLO_T },
+    { name: Text.SSL, body: Text.SSL_D, bodyTitle: Text.SSL_T },
+    { name: Text.DED, body: Text.DED_D, bodyTitle: Text.DED_T },
   ]
 
   const cards = [

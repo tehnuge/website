@@ -16,18 +16,22 @@ It may require minutes of down-time and usually need days or weeks to order the 
 This is totally different in Cloud technology. The setup may take upto only a few hours 
 and an upgrade can be done with no down-time or under a minute; virtually no 
 down-time in most cases.`
-export const CLOUD_SERVER_T=""
+export const CLOUD_SERVER_T="Cloud Server (VPS on Cloud)"
 export const CLOUD_MAIL = "Cloud Mail Hosting"
 export const CLOUD_MAIL_D = `Mail Service on Cloud tremendously increases traffic handling capability compared to regular mail server. Thanks to Distributed Resource Scheduler (DRS) on Cloud which prevents any single erver to get overloaded. Moreover, at Nine Web, we deploy multiple outgoing mail gateways to dispatch mails quicker and to help reducing blacklisting when attacked by spams.`
+export const CLOUD_MAIL_T = "E-mail Hosting on Cloud"
 export const DOMAIN = "Domain"
 export const DOMAIN_D = `Nine Web is an authorized service providers in registering many TLDs around the world such as .COM .NET .ORG .TH .BIZ .INFO and many more. Tens of thousands domain names have been registered with us.`
+export const DOMAIN_T = "Domain Registration"
 export const COLO = `Co-location`
 export const COLO_D = `We have 2 Data Centers in Bangkok's CBD which is the first Green IDC in Thailand. The centers are designed to run 24x7 even in flood situation with N+1 generators on 6th floor. With one of the largest bandwidth capacity for business use, we deliver your traffic at the maximum speed possible; upto 22Gbps domestic and 1Gbps international backbone, 4th largest in Thailand.`
+export const COLO_T = "Co-location"
 export const SSL = `SSL`
 export const SSL_D = `We offer SSL Certificate from 3 major CAs; Thawte, Verisign and GeoTrust for every level from personal websites to enterprise multiple servers. Price starts from 2,800 Baht/year.`
+export const SSL_T ="SSL Certificate"
 export const DED = `Dedicated`
 export const DED_D = `For enterprises or individuals who need high level of performance and/or special configuration in a server, dedicated server (lease or hire-purchase) is the best option to meet your needs. We can acquire and configure hardware from many brands such as Dell, HP, IBM, Cisco, Intel, etc. for you.`
-
+export const DED_T = "Dedicated Server (lease or hire-purchase)"
 export const CWH_LI = [
   "Web on Cloud is faster than regular hosting",
 "0% Hardware Down-time from harware MA",
