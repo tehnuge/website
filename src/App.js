@@ -30,35 +30,34 @@ const App = () => {
     <div className="d-flex justify-content-center">
       <div className="App">
         <header className="App-header">
-          <div className="flex-row">
-            <div className="App-logo col-sm-6">
+          <div className="d-flex justify-content-between">
+            <div className="App-logo">
               <img src="nineweb_mod.png" className="App-logo" alt="logo" />
               <h1>{Text.NINE_WEB}</h1>
             </div>
-            <div className="col-sm-6"></div>
+            <div><h2>contact us</h2></div>
           </div>
-          <div className="flex-row">
-            <ul className="tabs">
+          <ul className="tabs">
+            <div className="titles d-flex justify-content-around">
               {titles.map((title) => {
                 return <HeaderComp name={title.name} body={title.body} bodyTitle={title.bodyTitle} />
               })}
-            </ul>
-          </div>
+            </div>
+          </ul>
         </header>
-        <div className="flex-row">
+        <div className="body">
           <div className="d-flex align-items-center justify-content-start">
             <img data-aos="fade-left" src={imgBg} className="img-fluid main-image" />
             <h2>Leader in Servers</h2>
           </div>
+          <div className="d-flex justify-content-between">
+            {cards.map(card => {
+              return <div>
+                <Card name={card.name} li={card.li} />
+              </div>
+            })}
+          </div>
         </div>
-        <div className="row">
-          {cards.map(card => {
-            return <div className="col-sm-4">
-              <Card name={card.name} li={card.li} />
-            </div>
-          })}
-        </div>
-        <br></br>
         <footer>
           <div id="footer" className='d-flex justify-content-center'>
             <h3>Contact Us</h3>
