@@ -1,6 +1,5 @@
 .App {
   color: white;
-  margin: auto 5%;
 }
 .body{
   background-color: #336699;
@@ -68,18 +67,11 @@ li {
 
 #footer {
   background-color: #212f4c;
-  width: 100vw;
 }
 
-/* .App-link {
-  color: #61dafb;
-}
+@media screen and (max-width: 600px){
+  .d-flex{
+    flex-direction: column;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+}

@@ -27,8 +27,8 @@ const App = () => {
   ]
 
   return (
-    <div className="d-flex justify-content-center">
-      <div className="App">
+    <div className="App">
+
         <header className="App-header">
           <div className="d-flex justify-content-between">
             <div className="App-logo">
@@ -48,13 +48,14 @@ const App = () => {
         <div className="body">
           <div className="d-flex align-items-center justify-content-start">
             <img data-aos="fade-left" src={imgBg} className="img-fluid main-image" />
-            <h2>Leader in Servers</h2>
+            <h2>Leader in IAC and IAAS</h2>
           </div>
           <div className="d-flex justify-content-between">
             {cards.map(card => {
-              return <div>
+              return (
                 <Card name={card.name} li={card.li} />
-              </div>
+              )
+
             })}
           </div>
         </div>
@@ -64,7 +65,6 @@ const App = () => {
           </div>
         </footer>
       </div>
-    </div>
   );
 }
 
