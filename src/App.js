@@ -46,10 +46,12 @@ const App = () => {
                 <span><i class="fas fa-chevron-right"></i></span>
                 <div className="dropdown-content">
                   <div className="card">
-                    <div className="card-text">
-                    <b>phone:</b> +66 0 2722 9080
-                    <br></br>
-                    <b>mobile:</b> +66 8 5807 2443
+                    <div className="card-body">
+                      <div className="card-text">
+                        <b>phone:</b> +66 0 2722 9080
+                      <br></br>
+                        <b>mobile:</b> +66 8 5807 2443
+                      </div>
                     </div>
                   </div>
                 </div>
