@@ -11,7 +11,7 @@ const Card = props => {
           })}
         </ul>
       </div>
-      <a href="#" class="btn btn-primary">Learn more</a>
+      <a href={props.href} class="btn btn-primary">Learn more</a>
     </div>
   </div>
 }

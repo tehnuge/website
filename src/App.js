@@ -5,6 +5,12 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import * as Text from './text';
 import HeaderComp from './HeaderComp'
 import Card from './Card'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 AOS.init();
 const imgBg = "servers_t.png"
@@ -21,23 +27,29 @@ const App = () => {
   ]
 
   const cards = [
-    { name: Text.CLOUD_WEB_HOSTING, li: Text.CWH_LI },
-    { name: Text.CLOUD_SERVER, li: Text.CS_LI },
-    { name: Text.CLOUD_MAIL, li: Text.CM_LI }
+    { name: Text.CLOUD_WEB_HOSTING, li: Text.CWH_LI, href: "cloudwebhosting" },
+    { name: Text.CLOUD_SERVER, li: Text.CS_LI, href: "cloudserver" },
+    { name: Text.CLOUD_MAIL, li: Text.CM_LI, href: "cloudmail" }
   ]
 
   return (
-    <div className="App">
-
+    <Router>
+      <div className="App">
         <header className="App-header">
           <div className="d-flex justify-content-between">
             <div className="App-logo">
               <img src="nineweb_mod.png" className="App-logo" alt="logo" />
               <h1>{Text.NINE_WEB}</h1>
             </div>
-            <div><h2>contact us</h2></div>
+            <div>
+              <span className="text-center">
+                <span>contact us </span>
+                <span><i class="fas fa-chevron-right"></i></span>
+              </span>
+
+            </div>
           </div>
-          <ul className="tabs">
+          <ul className="tabs navbar-nav-scroll">
             <div className="titles d-flex justify-content-around">
               {titles.map((title) => {
                 return <HeaderComp name={title.name} body={title.body} bodyTitle={title.bodyTitle} />
@@ -45,26 +57,33 @@ const App = () => {
             </div>
           </ul>
         </header>
-        <div className="body">
-          <div className="d-flex align-items-center justify-content-start">
-            <img data-aos="fade-left" src={imgBg} className="img-fluid main-image" />
-            <h2>Leader in IAC and IAAS</h2>
-          </div>
-          <div className="d-flex justify-content-between">
-            {cards.map(card => {
-              return (
-                <Card name={card.name} li={card.li} />
-              )
-
-            })}
-          </div>
-        </div>
+        <Switch>
+          <Route exact path='/'>
+            <div className="body">
+              <div className="d-flex align-items-center justify-content-start">
+                <img data-aos="fade-left" src={imgBg} alt="server" className="img-fluid main-image" />
+                <h2>Leader in IAC and IAAS</h2>
+              </div>
+              <div className="d-flex justify-content-between">
+                {cards.map(card => {
+                  return (
+                    <Card name={card.name} li={card.li} />
+                  )
+                })}
+              </div>
+            </div>
+          </Route>
+          <Route path="/about">
+            <h1>ABOUT</h1>
+          </Route>
+        </Switch>
         <footer>
           <div id="footer" className='d-flex justify-content-center'>
             <h3>Contact Us</h3>
           </div>
         </footer>
       </div>
+    </Router>
   );
 }
 
