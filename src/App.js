@@ -3,17 +3,16 @@ import './App.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import * as Text from './text';
-import HeaderComp from './HeaderComp'
-import Card from './Card'
+import HeaderComp from './HeaderComp';
+import Home from './Home';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
-AOS.init();
 const imgBg = "servers_t.png"
+AOS.init();
 //const imgBg = "https://news.sophos.com/wp-content/uploads/2019/07/shutterstock_571378933-compressor.jpg"
 const App = () => {
   const titles = [
@@ -42,11 +41,19 @@ const App = () => {
               <h1>{Text.NINE_WEB}</h1>
             </div>
             <div>
-              <span className="text-center">
-                <span>contact us </span>
+              <span className="dropdown text-center">
+                <span className="">contact us </span>
                 <span><i class="fas fa-chevron-right"></i></span>
+                <div className="dropdown-content">
+                  <div className="card">
+                    <div className="card-text">
+                    <b>phone:</b> +66 0 2722 9080
+                    <br></br>
+                    <b>mobile:</b> +66 8 5807 2443
+                    </div>
+                  </div>
+                </div>
               </span>
-
             </div>
           </div>
           <ul className="tabs navbar-nav-scroll">
@@ -59,19 +66,7 @@ const App = () => {
         </header>
         <Switch>
           <Route exact path='/'>
-            <div className="body">
-              <div className="d-flex align-items-center justify-content-start">
-                <img data-aos="fade-left" src={imgBg} alt="server" className="img-fluid main-image" />
-                <h2>Leader in IAC and IAAS</h2>
-              </div>
-              <div className="d-flex justify-content-between">
-                {cards.map(card => {
-                  return (
-                    <Card name={card.name} li={card.li} />
-                  )
-                })}
-              </div>
-            </div>
+            <Home cards={cards} imgBg={imgBg} />
           </Route>
           <Route path="/about">
             <h1>ABOUT</h1>

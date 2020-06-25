@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeaderComp = props => {
   return (
     <li className="dropdown">
-      {props.name}
+      <Link to={'/'+ props.name}>{props.name}</Link>
       <div className="dropdown-content">
         <div className="card">
           <div className="card-body">
