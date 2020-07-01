@@ -3,17 +3,15 @@ import './Card.css'
 
 const Card = props => {
   return <div className="card">
-    <div className="card-body">
-    <i class="fas fa-bullseye"></i>
-      <h2 className="card-title">{props.name}</h2>
+    <div className="card-body text-center">
+      <i style={{ fontSize: '50px'}} className={props.card.icon}></i>
+      <h2 className="card-title">{props.card.name}</h2>
       <div className="card-text">
-        <ul>
-          {props.li.map(val => {
-            return <li>{val}</li>
+          {props.card.li.map(val => {
+            return <div>{val}</div>
           })}
-        </ul>
       </div>
-      <a href={props.href} class="btn btn-primary">Learn more</a>
+      <a href={props.card.href} className="btn btn-primary">Learn more</a>
     </div>
   </div>
 }

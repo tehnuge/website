@@ -52,7 +52,12 @@ li {
 }
 
 .card {
-  color: black;
+  flex: 1 1 0px;
+}
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 #footer {
@@ -61,7 +66,9 @@ li {
 .tabs-m {
   display:none;
 }
-
+.cards {
+  flex: 1 1 0px;
+}
 @media screen and (max-width: 600px) {
   .tabs {
     display: none;

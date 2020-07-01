@@ -10,9 +10,9 @@ const Home = props => {
       </div>
       <br />
       <h2 className="d-flex justify-content-center">How it Works</h2>
-      <div className="cards d-flex justify-content-between">
+      <div className="cards d-flex justify-content-between ">
         {props.cards.map(card =>
-          <Card name={card.name} li={card.li} />
+          <Card card={card} />
         )}
       </div>
     </div>

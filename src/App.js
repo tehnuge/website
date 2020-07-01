@@ -25,9 +25,9 @@ const App = () => {
   ]
 
   const cards = [
-    { name: "Target your audience", li: ["Get the right users using your site"], href: "cloudwebhosting" },
-    { name: "Discover", li: ["Browse metrics and insights on user experiences"], href: "cloudserver" },
-    { name: "Share", li: ["Build a shared understanding of your experience and share it across your favorite tools"], href: "cloudmail" }
+    { icon: "fas fa-bullseye", name: "Target your audience", li: ["Get the right users using your site; we'll find the ones you're looking for"], href: "cloudwebhosting" },
+    { icon: "fas fa-search", name: "Discover", li: ["Browse metrics and insights on user experiences"], href: "cloudserver" },
+    { icon: "fas fa-share-alt-square", name: "Share", li: ["Build a shared understanding of your experience and share it across your favorite tools"], href: "cloudmail" }
   ]
 
   return (
@@ -42,9 +42,9 @@ const App = () => {
           <div className="tabs-m dropdown">
             <i className="fas fa-bars"></i>
             <div className="dropdown-content">
-              <ul class="list-group">
+              <ul className="list-group">
                 {titles.map(title =>
-                  <li class="list-group-item">{title.name}</li>
+                  <li className="list-group-item">{title.name}</li>
                 )}
 
               </ul>
@@ -59,7 +59,7 @@ const App = () => {
             </div>
           </ul>
           <span className="free">
-            <Button variant="primary" >Try Nineweb for free</Button>
+            <Button variant="primary">Try Nineweb for free</Button>
           </span>
         </header>
         <Switch>
