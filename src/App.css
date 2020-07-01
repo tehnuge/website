@@ -1,12 +1,7 @@
-.App {
-  color: white;
-}
-.body {
-  background-color: #336699;
-}
+
 a,
 a:hover {
-  color: white;
+  color: #333132;
 }
 .dropdown-content {
   opacity: 0;
@@ -32,27 +27,20 @@ a:hover {
   /* static so dropdown-content is relative to entire header row */
   position: static;
 }
-.App-logo {
-  justify-content: center;
-}
 
 .main-image {
   max-height: 80vh;
+  max-width: 60vw;
 }
-.App-header {
-  /* min-height: 100vh; */
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  padding-bottom: 10px;
-  background-color: #212f4c;
-  /* background-color: #4c7bdf; */
+.hero {
+  min-height: 80vh;
 }
 .tabs {
   position: relative;
   flex-direction: row;
   font-size: 15px;
 }
+
 h1 {
   display: inline;
 }
@@ -68,11 +56,31 @@ li {
 }
 
 #footer {
-  background-color: #212f4c;
+  background-color: #fff;
+}
+.tabs-m {
+  display:none;
 }
 
 @media screen and (max-width: 600px) {
-  .d-flex {
+  .tabs {
+    display: none;
+  }
+  .tabs-m{
+    display: flex;
+  }
+  .cards {
     flex-direction: column;
+  }
+  .hero {
+    min-height: auto;
+  }
+  .main-image {
+    display:none;
+  }
+  .free{
+    display:flex;
+    width: 100vw;
+    justify-content: center;
   }
 }
