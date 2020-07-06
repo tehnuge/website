@@ -5,6 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import * as Text from './text';
 import HeaderComp from './HeaderComp';
 import Home from './Home';
+import Contact from './Contact';
 import Button from 'react-bootstrap/Button';
 import {
   BrowserRouter as Router,
@@ -44,17 +45,16 @@ const App = () => {
             <div className="dropdown-content">
               <ul className="list-group">
                 {titles.map(title =>
-                  <li className="list-group-item">{title.name}</li>
+                  <li key = {title.name} className="list-group-item">{title.name}</li>
                 )}
-
               </ul>
             </div>
 
           </div>
           <ul className="tabs navbar-nav-scroll flex-grow-1">
             <div className="titles d-flex justify-content-between">
-              {titles.map((title) => {
-                return <HeaderComp name={title.name} body={title.body} bodyTitle={title.bodyTitle} />
+              {titles.map(title => {
+                return <HeaderComp key={title.name} name={title.name} body={title.body} bodyTitle={title.bodyTitle} />
               })}
             </div>
           </ul>
@@ -66,8 +66,8 @@ const App = () => {
           <Route exact path='/'>
             <Home cards={cards} imgBg={imgBg} />
           </Route>
-          <Route path="/about">
-            <h1>ABOUT</h1>
+          <Route path="/contact">
+            <Contact />
           </Route>
         </Switch>
         <footer>

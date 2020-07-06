@@ -7,6 +7,10 @@ app.use(express.static(publicPath));
 app.get('*', (req, res) => {
    res.sendFile(path.join(publicPath, 'index.html'));
 });
+app.post('/send', (req, res) => {
+   console.log(req.body)
+})
+
 app.listen(port, () => {
    console.log('Server is up!');
 });
