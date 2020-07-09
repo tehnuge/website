@@ -7,8 +7,11 @@ app.use(express.static(publicPath));
 app.get('*', (req, res) => {
    res.sendFile(path.join(publicPath, 'index.html'));
 });
-app.post('/send', (req, res) => {
+app.post('/send', (err, req, res, next) => {
+   console.error(err.stack)
+
    console.log(req.body)
+   res.send("success")
 })
 
 app.listen(port, () => {

@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 
 
 const Contact = props => {
-  async function postData(url, data = { email, name, phone, info }) {
-    console.log(url)
+  async function postData(event, data = { email, name, phone, info }) {
     // Default options are marked with *
-    const response = await fetch(url, {
+    console.log(data)
+    const response = await fetch('/send', {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -43,16 +43,19 @@ const Contact = props => {
       case "info":
         setInfo(value);
         break;
+      default:
+        break;
     }
   }
 
 
   return (
-    <div className="container-fluid">
+    <div className="d-flex justify-content-center">
+
+      <form>
       <h2>
         Learn More
     </h2>
-      <form>
         <div className="form-group">
           <label>
             Email
@@ -74,7 +77,7 @@ const Contact = props => {
             <textarea name='info' onChange={handleChange} />
           </div>
         </div>
-        <input type="button" value="Submit" onClick={postData('/send')} />
+        <input type="button" value="Submit" onClick={postData} />
       </form>
     </div>
   )

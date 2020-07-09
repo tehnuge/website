@@ -18,11 +18,8 @@ AOS.init();
 //const imgBg = "https://news.sophos.com/wp-content/uploads/2019/07/shutterstock_571378933-compressor.jpg"
 const App = () => {
   const titles = [
-    { name: "Features", body: Text.CLOUD_WEB_HOSTING_D, bodyTitle: Text.CLOUD_WEB_HOSTING_T },
-    { name: "Pricing", body: Text.CLOUD_SERVER_D, bodyTitle: Text.CLOUD_SERVER_T },
-    { name: "Get Paid to Test", body: Text.CLOUD_MAIL_D, bodyTitle: Text.CLOUD_MAIL_T },
-    { name: "Blog", body: Text.DOMAIN_D, bodyTitle: Text.DOMAIN_T },
-    { name: 'Contact Us', body: '+66 0 2722 9080 +66 8 5807 2443', bodyTitle: 'Phone' }
+    { name: "About", body: Text.CLOUD_WEB_HOSTING_D, bodyTitle: Text.CLOUD_WEB_HOSTING_T },
+    { name: "Blog", body: Text.CLOUD_SERVER_D, bodyTitle: Text.CLOUD_SERVER_T },
   ]
 
   const cards = [
@@ -38,7 +35,7 @@ const App = () => {
           <div>
             <img src="nineweb_mod.png" className="App-logo" alt="logo" />
           </div>
-          <h1>{Text.NINE_WEB}</h1>
+          <h1>{Text.NAME}</h1>
           {/* mobile */}
           <div className="tabs-m dropdown">
             <i className="fas fa-bars"></i>
@@ -58,9 +55,6 @@ const App = () => {
               })}
             </div>
           </ul>
-          <span className="free">
-            <Button variant="primary">Try Nineweb for free</Button>
-          </span>
         </header>
         <Switch>
           <Route exact path='/'>

@@ -35,9 +35,7 @@ a:hover {
   max-height: 80vh;
   max-width: 60vw;
 }
-.hero {
-  min-height: 80vh;
-}
+
 .tabs {
   position: relative;
   flex-direction: row;

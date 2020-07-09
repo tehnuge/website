@@ -1,4 +1,4 @@
-export const NINE_WEB = "Nine Web"
+export const NAME = "John Duong"
 export const CLOUD_WEB_HOSTING = "Cloud Web Hosting"
 export const CLOUD_WEB_HOSTING_D = `Major benefit of cloud is it will move your 
   website to the fastest server available automatically. 
